@@ -9,13 +9,18 @@ export default [
     files: ["src/**/*.ts"],
     languageOptions: {
       parser: tsParser,
-      sourceType: "module"
+      sourceType: "module",
+      globals: {
+        process: "readonly",
+        console: "readonly"
+      }
     },
     plugins: {
       "@typescript-eslint": tseslint
     },
     rules: {
-      ...tseslint.configs.recommended.rules
+      ...tseslint.configs.recommended.rules,
+      "no-undef": "off"
     }
   },
   eslintConfigPrettier
