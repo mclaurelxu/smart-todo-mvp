@@ -1,12 +1,90 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #fafafa;
-  color: #222;
+  background: #f4f6fb;
+  color: #1f2937;
 }
 
-main {
-  max-width: 720px;
-  margin: 4rem auto;
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #1e40af;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 0.45rem 0.75rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.app-shell {
+  max-width: 900px;
+  margin: 2rem auto;
   padding: 0 1rem;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.top-nav h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.top-nav nav {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.page-content {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1rem;
+  min-height: 260px;
+}
+
+.centered-card {
+  width: min(420px, calc(100% - 2rem));
+  margin: 5rem auto;
+  padding: 1.25rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.centered-card h1 {
+  margin-top: 0;
+}
+
+.empty-state {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px dashed #94a3b8;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.empty-state p {
+  margin: 0.25rem 0;
 }
