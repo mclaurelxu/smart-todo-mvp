@@ -1,0 +1,13 @@
+{
+  "name": "smart-todo-mvp",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "lint": "npm run lint --workspaces",
+    "format": "npm run format --workspaces"
+  }
+}
