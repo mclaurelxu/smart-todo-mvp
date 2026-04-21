@@ -22,7 +22,8 @@ export const notFoundHandler: RequestHandler = (_req, _res, next) => {
   next(new ApiError(404, "NOT_FOUND", "Route not found."));
 };
 
-export const errorHandler: ErrorRequestHandler = (error, _req, res, _next) => {
+export const errorHandler: ErrorRequestHandler = (error, _req, res, next) => {
+  void next;
   const statusCode = error instanceof ApiError ? error.statusCode : 500;
   const code = error instanceof ApiError ? error.code : "INTERNAL_SERVER_ERROR";
   const message = error instanceof ApiError ? error.message : "Unexpected server error.";
