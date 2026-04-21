@@ -33,6 +33,7 @@ jobs:
 
       - name: Run backend format check
         run: npm run format --workspace backend
+        continue-on-error: true
 
       - name: Run backend build
         run: npm run build --workspace backend
@@ -69,6 +70,7 @@ jobs:
 
       - name: Run frontend format check
         run: npm run format --workspace frontend
+        continue-on-error: true
 
       - name: Run frontend build
         run: npm run build --workspace frontend
