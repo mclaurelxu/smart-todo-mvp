@@ -5,6 +5,7 @@ on:
     branches:
       - main
   pull_request:
+  workflow_dispatch:
 
 jobs:
   backend:
@@ -24,9 +25,48 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Run backend lint
+        run: npm run lint --workspace backend
+
+      - name: Run backend format check
+        run: npm run format --workspace backend
+
       - name: Run backend build
         run: npm run build --workspace backend
 
+      - name: Run backend migrations up
+        run: npm run db:migrate:up --workspace backend
+
+      - name: Run backend seed
+        run: npm run db:seed --workspace backend
+
+      - name: Run backend migrations down
+        run: npm run db:migrate:down --workspace backend
+
       - name: Run backend tests
         run: npm run test --workspace backend
+
+  frontend:
+    name: Frontend Build and Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run frontend lint
+        run: npm run lint --workspace frontend
+
+      - name: Run frontend format check
+        run: npm run format --workspace frontend
+
+      - name: Run frontend build
+        run: npm run build --workspace frontend
 
