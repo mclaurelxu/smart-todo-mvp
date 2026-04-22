@@ -27,6 +27,21 @@ button {
   cursor: pointer;
 }
 
+input {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0.5rem 0.6rem;
+  font: inherit;
+}
+
+select {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0.5rem 0.6rem;
+  font: inherit;
+  background: #fff;
+}
+
 .app-shell {
   max-width: 900px;
   margin: 2rem auto;
@@ -48,6 +63,12 @@ button {
 .top-nav h1 {
   margin: 0;
   font-size: 1.2rem;
+}
+
+.user-meta {
+  margin: 0.3rem 0 0;
+  color: #475569;
+  font-size: 0.9rem;
 }
 
 .top-nav nav {
@@ -77,6 +98,30 @@ button {
   margin-top: 0;
 }
 
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.auth-form button {
+  margin-top: 0.4rem;
+}
+
+.form-error {
+  margin: 0.2rem 0 0;
+  color: #b91c1c;
+}
+
+.link-button {
+  margin-top: 0.8rem;
+  border: none;
+  background: transparent;
+  color: #1e40af;
+  text-decoration: underline;
+  padding: 0;
+}
+
 .empty-state {
   margin-top: 1rem;
   padding: 1rem;
@@ -87,4 +132,64 @@ button {
 
 .empty-state p {
   margin: 0.25rem 0;
+}
+
+.task-form {
+  display: grid;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.task-form h3 {
+  margin: 0 0 0.2rem;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.task-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.8rem;
+  background: #fff;
+}
+
+.task-title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.task-meta {
+  margin: 0.45rem 0;
+  color: #475569;
+  font-size: 0.92rem;
+}
+
+.task-description {
+  margin: 0.35rem 0;
+}
+
+.task-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.task-edit-grid {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.task-edit-grid label {
+  display: grid;
+  gap: 0.2rem;
 }

@@ -12,16 +12,16 @@ export default [
       sourceType: "module",
       globals: {
         process: "readonly",
-        console: "readonly"
-      }
+        console: "readonly",
+      },
     },
     plugins: {
-      "@typescript-eslint": tseslint
+      "@typescript-eslint": tseslint,
     },
     rules: {
       ...tseslint.configs.recommended.rules,
-      "no-undef": "off"
-    }
+      "no-undef": "off",
+    },
   },
-  eslintConfigPrettier
+  eslintConfigPrettier,
 ];

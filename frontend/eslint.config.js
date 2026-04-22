@@ -11,21 +11,21 @@ export default [
       parser: tsParser,
       parserOptions: {
         ecmaFeatures: { jsx: true },
-        sourceType: "module"
+        sourceType: "module",
       },
       globals: {
         document: "readonly",
         window: "readonly",
-        HTMLElement: "readonly"
-      }
+        HTMLElement: "readonly",
+      },
     },
     plugins: {
-      "@typescript-eslint": tseslint
+      "@typescript-eslint": tseslint,
     },
     rules: {
       ...tseslint.configs.recommended.rules,
-      "no-undef": "off"
-    }
+      "no-undef": "off",
+    },
   },
-  eslintConfigPrettier
+  eslintConfigPrettier,
 ];

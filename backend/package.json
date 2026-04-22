@@ -12,6 +12,7 @@
     "db:migrate:up": "tsx src/db/migrate.ts up",
     "db:migrate:down": "tsx src/db/migrate.ts down",
     "db:seed": "tsx src/db/seed.ts",
+    "reminders:run-once": "tsx src/reminders/runOnce.ts",
     "test": "tsx --test src/**/*.test.ts"
   },
   "dependencies": {
